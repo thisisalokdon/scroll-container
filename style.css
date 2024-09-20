@@ -9,21 +9,32 @@ body {
 }
 
 .scroll-container {
-    width: 500px;
-    overflow: hidden;
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflowing content */
+    background-color: #fff;
+    padding: 20px;
 }
 
 .scroll-content {
     display: flex;
     justify-content: space-around;
-    animation: scroll 10s linear infinite;
+    animation: scroll 10s linear infinite; /* Continuous scrolling effect */
+}
+
+.icon-wrapper {
+    width: 150px;
+    height: 120px;
+    text-align: center;
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
 }
 
 .scroll-content img {
-    width: 50px;
-    height: 120px;
-    object-fit: cover;
-    margin-right: 20px;
+    width: 50px; /* Fixed size for icons */
+    height: auto;
 }
 
 @keyframes scroll {
@@ -31,6 +42,6 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* Scroll left */
     }
 }
