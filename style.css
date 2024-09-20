@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.scroll-container {
+    width: 500px;
+    overflow: hidden;
+}
+
+.scroll-content {
+    display: flex;
+    justify-content: space-around;
+    animation: scroll 10s linear infinite;
+}
+
+.scroll-content img {
+    width: 50px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
